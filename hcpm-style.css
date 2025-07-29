@@ -1,0 +1,149 @@
+<style type="text/css">
+
+  .hcpm-custom h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  .hcpm-custom h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  .hcpm-custom h4 {
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .hcpm-custom h5 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+
+  .hcpm-custom p {
+    line-height: 1.7;
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+  }
+
+  .hcpm-custom ul {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    padding-left: 2em;
+  }
+
+  .hcpm-custom li {
+    margin-bottom: 0.5rem;
+  }
+
+/* --- 修改後：超連結樣式 (完整版) --- */
+
+/* 1. 預設狀態 (Default State) */
+.hcpm-custom a {
+  color: #0056b3; /* 主題藍色 */
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 86, 179, 0.4);
+  padding-bottom: 1px;
+  transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out, outline-offset 0.1s ease;
+  border-radius: 2px; /* 為了讓 focus 輪廓有圓角，這裡也加上 */
+}
+
+/* 2. 滑鼠懸停狀態 (Hover State) */
+.hcpm-custom a:hover {
+  color: #003d82; /* 顏色加深 */
+  border-bottom-color: #003d82; /* 底線變實色 */
+}
+
+/* 3. 鍵盤焦點狀態 (Focus State) - 無障礙關鍵 */
+.hcpm-custom a:focus-visible {
+  outline: 2px solid #0056b3; /* 清晰的輪廓 */
+  outline-offset: 2px; /* 輪廓外推 */
+}
+
+/* 4. 作用中狀態 (Active State) - 點擊瞬間的回饋 */
+.hcpm-custom a:active {
+  color: #002752; /* 顏色最深 */
+  border-bottom-color: #002752;
+}
+
+/* 5. 已訪問狀態 (Visited State) - 幫助使用者導覽 */
+.hcpm-custom a:visited {
+  color: #5b4a77; /* 使用紫色調，與未訪問的藍色區分 */
+  border-bottom-color: rgba(91, 74, 119, 0.4);
+}
+
+/* 當已訪問的連結被 hover 或 focus 時，也需要有回饋 */
+.hcpm-custom a:visited:hover,
+.hcpm-custom a:visited:focus-visible {
+    color: #3e3153; /* 已訪問連結的加深版顏色 */
+    border-bottom-color: #3e3153;
+}
+.hcpm-custom a:visited:focus-visible {
+    outline-color: #5b4a77; /* 已訪問連結的 focus 輪廓顏色也跟著變 */
+}
+
+
+  /* --- 響應式表格樣式 --- */
+  .rwd_form {
+    overflow-x: auto; /* 讓容器在內容超出時，產生水平捲軸 */
+    -webkit-overflow-scrolling: touch; /* 優化在iOS上的滑動體驗 */
+    margin-bottom: 1.25rem;
+  }
+  .table-scroll-hint {
+      display: none; /* 預設隱藏提示訊息 */
+      text-align: center;
+      color: #6c757d;
+      font-size: 0.9em;
+      padding: 0.5rem;
+      background-color: #f8f9fa;
+      border-radius: 4px;
+      margin-bottom: 0.5rem;
+  }
+
+  /* --- 以下為新增的表格美化樣式 --- */
+  .table-rwd01 {
+    border-collapse: collapse; /* 合併邊框 */
+    width: 100%;
+    font-size: 0.95em; /* 調整字體大小 */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* 增加細緻陰影 */
+    border-radius: 8px; /* 圓角 */
+    overflow: hidden; /* 確保陰影與圓角效果正確 */
+  }
+  .table-rwd01 thead tr {
+    background-color: #0056b3; /* 標題使用較深的藍色 */
+    color: #ffffff; /* 白色文字 */
+    text-align: center;
+  }
+  .table-rwd01 th, .table-rwd01 td {
+    padding: 14px 16px; /* 增加內距 */
+    text-align: center;
+  }
+  .table-rwd01 tbody tr {
+    border-bottom: 1px solid #e0e0e0; /* 行與行之間的分隔線 */
+  }
+  .table-rwd01 tbody tr:nth-of-type(even) {
+    background-color: #f8f9fa; /* 斑馬紋，使用更柔和的灰色 */
+  }
+  .table-rwd01 tbody tr:last-of-type {
+    border-bottom: 3px solid #0056b3; /* 最後一行的底線使用主題色 */
+  }
+  .table-rwd01 tbody tr:hover {
+    background-color: #e2eefd; /* 滑鼠懸停效果 */
+    cursor: default;
+  }
+
+  /* 當螢幕寬度小於或等於640px時，顯示提示訊息 */
+  @media (max-width: 640px) {
+      .table-scroll-hint {
+          display: block;
+      }
+      .rwd_form { /* 在手機上增加外框線，確保捲動區域清晰 */
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+  }
+</style>
